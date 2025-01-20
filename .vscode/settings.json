@@ -1,0 +1,17 @@
+{
+    "cSpell.words": [
+        "criar",
+        "cupom",
+        "listar",
+        "pychache",
+        "sessionmaker",
+        "usuario",
+        "usuarios",
+        "venv"
+    ],
+    "files.exclude": {
+        "**/venv": true,
+        "**/__pycache__": true,
+        "**/.pytest_cache": true
+    }
+}
