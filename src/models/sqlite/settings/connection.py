@@ -9,7 +9,6 @@ class SqliteConnectionHandler:
 
     def connect(self) -> SqliteConnection:
         conn = sqlite3.connect(self.__connection_string, check_same_thread=False)
-
         self.__conn = conn
         return conn
 
