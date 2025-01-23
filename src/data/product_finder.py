@@ -25,6 +25,7 @@ class ProductFinder:
         if not product:
             product = self.__find_in_sql(product_name)
             self.__insert_in_cache(product)
+        self.__format_response(product_name)
 
     def __find_in_cache(self, product_name: str) -> tuple:
         products_infos = self.__redis_repo.get_key(product_name)
