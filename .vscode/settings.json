@@ -1,10 +1,14 @@
 {
     "cSpell.words": [
+        "cadastrado",
         "criar",
         "cupom",
+        "jsonify",
         "listar",
+        "produto",
         "pychache",
         "sessionmaker",
+        "sucesso",
         "usuario",
         "usuarios",
         "venv"
