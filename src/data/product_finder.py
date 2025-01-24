@@ -25,7 +25,7 @@ class ProductFinder:
         if not product:
             product = self.__find_in_sql(product_name)
             self.__insert_in_cache(product)
-        self.__format_response(product_name)
+        return self.__format_response(product)
 
     def __find_in_cache(self, product_name: str) -> tuple:
         products_infos = self.__redis_repo.get_key(product_name)
@@ -40,7 +40,7 @@ class ProductFinder:
             raise Exception("Produto nao encontrado!")
         return product
 
-    def insert_in_cache(self, product: tuple) -> None:
+    def __insert_in_cache(self, product: tuple) -> None:
         product_name = product[1]
         value = f"{product[2]}, {product[3]}"
         self.__redis_repo.insert_ex(product_name, value, ex=60)

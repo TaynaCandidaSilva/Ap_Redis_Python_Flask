@@ -20,9 +20,9 @@ class ProductCreate:
     def create(self, http_request: HttpRequest) -> HttpResponse:
         body = http_request.body
 
-        name = body.get["name"]
-        price = body.get["price"]
-        quantity = body.get["quantity"]
+        name = body.get("name")
+        price = body.get("price")
+        quantity = body.get("quantity")
 
         self.__insert_product_in_sql(name, price, quantity)
         self.__insert_in_cache(name, price, quantity)
